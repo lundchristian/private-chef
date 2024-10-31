@@ -1,0 +1,10 @@
+# ignore these files
+.uit_key
+
+# ignore these directories
+.misc/
+.venv/
+.vscode/
+
+# ignore the ai model, too large to upload
+src/models/

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Private Fridge</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="controls">
+            <label for="makeRecipeButton">🔒 Fridge</label>
+            <button id="makeRecipeButton" onclick="promptFridge()">Make Recipe</button>
+            <label for="spicinessSlider">🌶️ Spicy</label>
+            <input type="range" id="spicinessSlider" min="0" max="1" step="0.1" value="0.5">
+            <label for="regionDropdown">🌎 Region</label>
+            <select id="regionDropdown">
+                <option value="italian">Italian</option>
+                <option value="chinese">Chinese</option>
+                <option value="mexican">Mexican</option>
+                <option value="indian">Indian</option>
+                <option value="french">French</option>
+            </select>
+            <label for="modelDropdown">🧑‍🍳 Model</label>
+            <select id="modelDropdown">
+                <option value="gpt-4o-mini">Ask Jeeves</option>
+                <option value="local">Ask Local Dude</option>
+            </select>
+        </div>
+        <div class="responseArea" id="responseArea">
+
+            <!-- uncomment to get better style feedback loop -->
+            <!-- <h2>Private Fridge will serve you a most wonderful Chicken and Broccoli Frittata</h2>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>4 eggs</li>
+                <li>1 cup milk</li>
+                <li>1 cup broccoli, chopped</li>
+                <li>1 chicken breast, diced</li>
+                <li>1 cup cheese, shredded (preferably mozzarella or parmesan)</li>
+                <li>2 tbsp butter</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+            <h3>Steps:</h3>
+            <ol>
+                <li>Preheat your oven to 375°F (190°C).</li>
+                <li>In a skillet over medium heat, melt the butter and add the diced chicken breast. Season with salt and pepper, and cook until the chicken is browned and cooked through.</li>
+                <li>Add the chopped broccoli to the skillet and sauté for 3-4 minutes until tender.</li>
+                <li>In a bowl, whisk together the eggs and milk, then stir in the shredded cheese. Pour this mixture over the chicken and broccoli in the skillet.</li>
+                <li>Cook for about 2-3 minutes until the edges start to set, then transfer the skillet to the oven.</li>
+                <li>Bake for 15-20 minutes, or until the frittata is puffed and golden.</li>
+                <li>Let it cool for a few minutes, then slice and serve it warm.</li>
+                <li>Enjoy your delicious Chicken and Broccoli Frittata with a fresh side salad of lettuce and tomatoes!</li>
+            </ol> -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
