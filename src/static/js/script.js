@@ -5,6 +5,12 @@ async function promptFridge() {
     const region = document.getElementById("regionDropdown").value;
     const responseArea = document.getElementById("responseArea");
 
+    const button = document.getElementById("networkButton");
+    if (button.innerHTML === "Offline" && model !== "local") {
+        alert("Jeeves cannot take your order.\n\nHe's out cooking on the interwebs.");
+        return;
+    }
+
     // show loading spinner while waiting for response
     responseArea.innerHTML = '<div class="spinner"></div>';
 
@@ -79,4 +85,16 @@ function generateJeevesRecipeHTML(dishName, ingredients, steps) {
             ${steps.map(step => `<li>${step}</li>`).join("")}
         </ol>
     `;
+}
+
+function connection() {
+    const button = document.getElementById("networkButton");
+    const status = button.innerHTML;
+    if (status === "Online") {
+        button.innerHTML = "Offline";
+        button.style.backgroundColor = "#FF8A8A";
+    } else {
+        button.innerHTML = "Online";
+        button.style.backgroundColor = "#A0D683";
+    }
 }
