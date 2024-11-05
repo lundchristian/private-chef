@@ -1,8 +1,8 @@
 # Private Fridge
 
-(Repository)[https://github.com/lundchristian/private-chef] on GitHub
+[Repository](https://github.com/lundchristian/private-chef) on GitHub
 
-(Image)[https://hub.docker.com/r/lundchristian/uit-repo/tags] on DockerHub
+[Image](https://hub.docker.com/r/lundchristian/uit-repo/tags) on DockerHub
 
 Use the docker image if you want to try it out.
 
